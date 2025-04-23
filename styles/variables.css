@@ -13,6 +13,8 @@
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
   --lamp-display: block;
+  --button-border-color: var(--accent-color);
+  --button-hover-color: #FF007066;
   --gap-transfer-10px-20px: clamp(
     10px,
     calc(10px + ((20 - 10) * ((100vw - 375px) / (768 - 375)))),

@@ -17,6 +17,8 @@
   --background-image: url(../images/cover-image-light.png);
   --background-color: #FFF1F7;
   --lamp-display: none;
+  --button-border-color: var(--paragraph-text-color);
+  --button-hover-color: #32312D66;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,10 +27,13 @@
     --accent-color: #FF8DCB;
     --header-title-color: #FFC2E6;
     --paragraph-text-color: #353430;
-    --content-text-color: #353430;
+    --content-title-color: var(--paragraph-text-color);
+    --content-text-color: var(--paragraph-text-color);
     --background-image: url(../images/cover-image-light.png);
     --background-color: #FFF1F7;
-    --lamp-display: none;    
+    --lamp-display: none;
+    --button-border-color: var(--paragraph-text-color);
+    --button-hover-color: #32312D66;    
   }
 }
 
