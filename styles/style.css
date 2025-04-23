@@ -50,6 +50,7 @@
   position: absolute;
   top: var(--decor-corner-indent);
   right: calc(28px + var(--decor-corner-indent));
+  display: var(--lamp-display);
 }
 
 .lamp::before {
@@ -174,7 +175,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--content-title-color);
 }
 
 .card {

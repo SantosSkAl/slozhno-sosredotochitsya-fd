@@ -8,15 +8,11 @@
   --accent-color: #ff0070;
   --header-title-color: #DB00FF;
   --paragraph-text-color: #000028;
+  --content-title-color: var(--accent-color);
   --content-text-color: #F1B2CE;
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
-  /* --decor-corner-indent: clamp(
-    10px,
-    calc(10px + ((20 - 10) * ((100vw - 375px) / (768 - 375)))),
-    20px
-  );
-  --gap-transfer-10px-20px: var(--decor-corner-indent); */
+  --lamp-display: block;
   --gap-transfer-10px-20px: clamp(
     10px,
     calc(10px + ((20 - 10) * ((100vw - 375px) / (768 - 375)))),
