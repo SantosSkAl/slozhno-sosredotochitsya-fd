@@ -21,40 +21,26 @@
     20px
   );
   --decor-corner-indent: var(--gap-transfer-10px-20px);
-  --theme-menu-indent: clamp(
-    75px,
-    calc(75px + ((192 - 75) * ((100vw - 375px) / (768 - 375)))),
-    192px
-  );
-  --header-title-indent: clamp(
-    65px,
-    calc(65px + ((173 - 65) * ((100vw - 375px) / (768 - 375)))),
-    173px
-  );
-  --header-title-indent-absolute-xl: clamp(
-    319px,
-    calc(463px + ((319 - 463) * ((100vw - 768px) / (1024 - 768)))),
-    463px
-  );
+  --decor-cornes-size: 25px;
   --gap-transfer-10px-0px: clamp(
     0px,
     calc(10px + ((0 - 10) * ((100vw - 375px) / (768 - 375)))),
     10px
   );
-  --header-paragraph-indent: clamp(
-    66px,
-    calc(66px + ((183 - 66) * ((100vw - 375px) / (768 - 375)))),
-    183px
+  --gap-transfer-40px-60px: clamp(
+    40px,
+    calc(40px + ((60 - 40) * ((100vw - 375px) / (768 - 375)))),
+    60px
+  );
+  --gap-transfer-50px-80px: clamp(
+    50px,
+    calc(50px + ((80 - 50) * ((100vw - 375px) / (768 - 375)))),
+    80px
   );
   --header-paragraph-width: clamp(
     355px,
     calc(355px + ((364 - 355) * ((100vw - 375px) / (768 - 375)))),
     364px
-  );
-  --header-paragraph-indent-xl: clamp(
-    134px,
-    calc(183px + ((134 - 183) * ((100vw - 768px) / (1024 - 768)))),
-    183px
   );
   --header-paragraph-width-xl: clamp(
     364px,

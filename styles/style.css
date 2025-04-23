@@ -4,7 +4,8 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  /* gap: 40px; */
+  gap: var(--gap-transfer-40px-60px);
   background-color: var(--background-color);
   font-family: var(--main-font), var(--fallback-font);
   background-attachment: fixed;
@@ -12,12 +13,13 @@
 
 .header {
   position: relative;
-  block-size: 100vh;
+  /* block-size: 100vh; */
+  min-block-size: max(100dvh, 668px);
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .decorated-zone::after {
@@ -27,8 +29,8 @@
   bottom: 10px; */
   left: var(--decor-corner-indent);
   bottom: var(--decor-corner-indent);
-  inline-size: 25px;
-  block-size: 25px;
+  inline-size: var(--decor-cornes-size);
+  block-size: var(--decor-cornes-size);
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
 }
@@ -40,8 +42,8 @@
   top: 10px; */
   right: var(--decor-corner-indent);
   top: var(--decor-corner-indent);
-  inline-size: 25px;
-  block-size: 25px;
+  inline-size: var(--decor-cornes-size);
+  block-size: var(--decor-cornes-size);
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
 }
@@ -79,11 +81,13 @@
 
 .header__theme-menu {
   /* margin-block-start: 75px; */
-  margin-block-start: var(--theme-menu-indent);
+  /* margin-block-start: var(--theme-menu-indent); */
   /* margin-block-start: 10.9vh; */
   /* margin-inline-end: 10px; */
   margin-inline-end: var(--gap-transfer-10px-20px);
-  align-self: end;
+  margin-block-start: var(--gap-transfer-10px-20px);
+  align-self: center;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -110,11 +114,6 @@
   padding: 2px 13px 4px 13px;
 }
 
-.header__theme-menu-button_active {
-  border-color: var(--button-border-color);
-  pointer-events: none;
-}
-
 .header__theme-menu-button:hover {
   border-color: var(--button-hover-color);
   cursor: pointer;
@@ -131,13 +130,19 @@
   border-bottom: 1px solid var(--button-border-color);
 }
 
+.header__theme-menu-button_active {
+  border-color: var(--button-border-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active:hover {
+  border-color: var(--button-border-color);
+  cursor: default;
+}
+
 .header__title {
-  /* margin-block-start: 65px; */
-  margin-block-start: var(--header-title-indent);
-  /* margin-inline-start: 10px; */
   margin-inline-start: var(--gap-transfer-10px-0px);
   margin-inline-end: var(--gap-transfer-10px-0px);
-  /* align-self: start; */
   font-weight: 700;
   /* font-size: 116px; */
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -147,14 +152,11 @@
 }
 
 .header__paragraph {
+  align-self: center;
+  justify-self: end;
   inline-size: var(--header-paragraph-width);
-  align-self: end;
-  /* margin-block-start: 55px; */
-  margin-block-start: auto;
-  /* margin-block-end: 66px; */
-  margin-block-end: var(--header-paragraph-indent);
+  margin-block-end: var(--gap-transfer-10px-20px);
   margin-inline-start: 10px;
-  /* margin-inline-end: 10px; */
   margin-inline-end: var(--gap-transfer-10px-20px);
   font-weight: 700;
   font-size: 18px;
@@ -169,12 +171,13 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  /* gap: 50px; */
+  gap: var(--gap-transfer-50px-80px);
+  margin-inline-start: var(--gap-transfer-10px-20px);
+  margin-inline-end: var(--gap-transfer-10px-20px);
 }
 
 .content__type-columns {
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -240,19 +243,15 @@
 }
 
 .content__type-full-width {
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .content__gallery {
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap-transfer-10px-20px);
 }
 
 .content__gallery_title {
@@ -265,7 +264,7 @@
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: var(--gap-transfer-10px-20px);
 }
 
 .gallery__image {
@@ -276,15 +275,14 @@
 
 .footer {
   position: relative;
-  block-size:  100vh;
+  /* block-size:  100vh; */
+  min-block-size: max(100dvh, 668px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer__title {
-  /* margin-inline-start: 10px;
-  margin-inline-end: 10px; */
   font-weight: 700;
   /* font-size: 116px; */
   line-height: 83%;
@@ -294,35 +292,19 @@
 }
 
 @media (768px <= width) {
-  .page {
-    gap: 60px;
-  }
-
-  .content {
-    gap: 80px;
-  }
-
   .header__title {
-    /* margin-block-start: 273px; */
-    position: absolute;
-    margin-block-start: var(--header-title-indent-absolute-xl);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__paragraph {
-    margin-block-end: var(--header-paragraph-indent-xl);
     inline-size: var(--header-paragraph-width-xl);
   }
 
   .content__type-columns {
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
     grid-template-columns: 1fr 2fr;
   }
 
   .content__type-full-width {
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
     grid-template-columns: 1fr 2fr;
   }
   
@@ -344,15 +326,8 @@
     grid-row: 1 / 2;
   }
 
-  .content__gallery {
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
-    gap: 20px;
-  }
-
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
   }
 
   .gallery__image:nth-child(1) {
@@ -388,18 +363,13 @@
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    margin-block-start: 20px;
+    justify-self: center;
+    align-self: start;
     margin-inline-end: 0;
-    align-self: center;
   }
   
   .header__theme-menu-list {
     flex-direction: row;
-  }
-
-  .header__title {
-    margin-block-start: 319px;
-    font-size: 157px;
   }
 
   .content__type-columns {
@@ -428,5 +398,4 @@
     grid-column: 2 / 4;
     grid-row: 1 / 2;
   }
-
 }
