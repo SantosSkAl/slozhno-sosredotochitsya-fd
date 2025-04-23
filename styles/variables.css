@@ -11,4 +11,56 @@
   --content-text-color: #F1B2CE;
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
+  /* --decor-corner-indent: clamp(
+    10px,
+    calc(10px + ((20 - 10) * ((100vw - 375px) / (768 - 375)))),
+    20px
+  );
+  --gap-transfer-10px-20px: var(--decor-corner-indent); */
+  --gap-transfer-10px-20px: clamp(
+    10px,
+    calc(10px + ((20 - 10) * ((100vw - 375px) / (768 - 375)))),
+    20px
+  );
+  --decor-corner-indent: var(--gap-transfer-10px-20px);
+  --theme-menu-indent: clamp(
+    75px,
+    calc(75px + ((192 - 75) * ((100vw - 375px) / (768 - 375)))),
+    192px
+  );
+  --header-title-indent: clamp(
+    65px,
+    calc(65px + ((173 - 65) * ((100vw - 375px) / (768 - 375)))),
+    173px
+  );
+  --header-title-indent-absolute-xl: clamp(
+    319px,
+    calc(463px + ((319 - 463) * ((100vw - 768px) / (1024 - 768)))),
+    463px
+  );
+  --gap-transfer-10px-0px: clamp(
+    0px,
+    calc(10px + ((0 - 10) * ((100vw - 375px) / (768 - 375)))),
+    10px
+  );
+  --header-paragraph-indent: clamp(
+    66px,
+    calc(66px + ((183 - 66) * ((100vw - 375px) / (768 - 375)))),
+    183px
+  );
+  --header-paragraph-width: clamp(
+    355px,
+    calc(355px + ((364 - 355) * ((100vw - 375px) / (768 - 375)))),
+    364px
+  );
+  --header-paragraph-indent-xl: clamp(
+    134px,
+    calc(183px + ((134 - 183) * ((100vw - 768px) / (1024 - 768)))),
+    183px
+  );
+  --header-paragraph-width-xl: clamp(
+    364px,
+    calc(364px + ((491 - 364) * ((100vw - 768px) / (1024 - 768)))),
+    491px
+  );
 }
