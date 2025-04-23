@@ -17,7 +17,6 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  /* font-family: var(--main-font), var(--fallback-font); */
 }
 
 .decorated-zone::after {
@@ -99,7 +98,6 @@
   color: var(--accent-color);
   min-inline-size: 70px;
   min-block-size: 26px;
-
 }
 
 .header__theme-menu-button {
@@ -157,7 +155,6 @@
   margin-inline-start: 10px;
   /* margin-inline-end: 10px; */
   margin-inline-end: var(--gap-transfer-10px-20px);
-  /* font-family: var(--main-font), var(--fallback-font); */
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -172,7 +169,6 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  /* font-family: var(--main-font), var(--fallback-font); */
 }
 
 .content__type-columns {
@@ -221,7 +217,6 @@
 .card__content {
   color: var(--content-text-color);
   font-weight: 400;
-  /* padding-block-end: 10px; */
 }
 
 .card__content_link {
@@ -297,7 +292,6 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-/* @media (768px <= width < 1024px) { */
 @media (768px <= width) {
   .page {
     gap: 60px;
