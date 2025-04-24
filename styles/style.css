@@ -4,7 +4,6 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: flex;
   flex-direction: column;
-  /* gap: 40px; */
   gap: var(--gap-transfer-40px-60px);
   background-color: var(--background-color);
   font-family: var(--main-font), var(--fallback-font);
@@ -13,7 +12,6 @@
 
 .header {
   position: relative;
-  /* block-size: 100vh; */
   min-block-size: max(100dvh, 668px);
   background-image: var(--background-image);
   background-size: cover;
@@ -25,27 +23,23 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  /* left: 10px;
-  bottom: 10px; */
   left: var(--decor-corner-indent);
   bottom: var(--decor-corner-indent);
-  inline-size: var(--decor-cornes-size);
-  block-size: var(--decor-cornes-size);
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  inline-size: var(--decor-corner-size);
+  block-size: var(--decor-corner-size);
+  border-block-end: 1px solid var(--decor-corner-color);
+  border-inline-start: 1px solid var(--decor-corner-color);
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
-  /* right: 10px;
-  top: 10px; */
   right: var(--decor-corner-indent);
   top: var(--decor-corner-indent);
-  inline-size: var(--decor-cornes-size);
-  block-size: var(--decor-cornes-size);
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  inline-size: var(--decor-corner-size);
+  block-size: var(--decor-corner-size);
+  border-block-start: 1px solid var(--decor-corner-color);
+  border-inline-end: 1px solid var(--decor-corner-color);
 }
 
 .lamp {
@@ -66,8 +60,6 @@
 .lamp::after {
   content: "";
   position: absolute;
-  /* top: 8px; */
-  /* left: 42px; */
   left: 100%;
   margin-inline-start: 10px;
   top: 50%;
@@ -80,10 +72,6 @@
 }
 
 .header__theme-menu {
-  /* margin-block-start: 75px; */
-  /* margin-block-start: var(--theme-menu-indent); */
-  /* margin-block-start: 10.9vh; */
-  /* margin-inline-end: 10px; */
   margin-inline-end: var(--gap-transfer-10px-20px);
   margin-block-start: var(--gap-transfer-10px-20px);
   align-self: center;
@@ -144,7 +132,6 @@
   margin-inline-start: var(--gap-transfer-10px-0px);
   margin-inline-end: var(--gap-transfer-10px-0px);
   font-weight: 700;
-  /* font-size: 116px; */
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--header-title-color);
@@ -171,7 +158,6 @@
 .content {
   display: flex;
   flex-direction: column;
-  /* gap: 50px; */
   gap: var(--gap-transfer-50px-80px);
   margin-inline-start: var(--gap-transfer-10px-20px);
   margin-inline-end: var(--gap-transfer-10px-20px);
@@ -192,7 +178,6 @@
 
 .card {
   inline-size: 100%;
-  /* block-size: 100%; */
   font-size: 18px;
   line-height: 23.4px;
   display: flex;
@@ -229,7 +214,6 @@
 }
 
 .card__content_link:hover {
-  /* text-decoration: underline; */
   border-bottom: 1.5px solid var(--content-text-color);
   cursor: pointer;
 }
@@ -275,7 +259,6 @@
 
 .footer {
   position: relative;
-  /* block-size:  100vh; */
   min-block-size: max(100dvh, 668px);
   display: flex;
   justify-content: center;
@@ -284,7 +267,6 @@
 
 .footer__title {
   font-weight: 700;
-  /* font-size: 116px; */
   line-height: 83%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--header-title-color);

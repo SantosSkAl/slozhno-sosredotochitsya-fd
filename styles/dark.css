@@ -19,6 +19,7 @@
   --lamp-display: block;
   --button-border-color: var(--accent-color);
   --button-hover-color: #FF007066;
+  --decor-corner-color: var(--accent-color);
 }
 
 /* .theme-dark .page {

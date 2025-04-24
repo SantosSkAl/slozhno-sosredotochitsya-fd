@@ -21,7 +21,8 @@
     20px
   );
   --decor-corner-indent: var(--gap-transfer-10px-20px);
-  --decor-cornes-size: 25px;
+  --decor-corner-size: 25px;
+  --decor-corner-color: var(--accent-color);
   --gap-transfer-10px-0px: clamp(
     0px,
     calc(10px + ((0 - 10) * ((100vw - 375px) / (768 - 375)))),
