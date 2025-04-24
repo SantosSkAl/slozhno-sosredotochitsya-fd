@@ -7,17 +7,24 @@
   gap: var(--gap-transfer-40px-60px);
   background-color: var(--background-color);
   font-family: var(--main-font), var(--fallback-font);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
 .header {
-  position: relative;
+  /* position: relative; */
   min-block-size: max(100dvh, 668px);
-  background-image: var(--background-image);
+  /* background-image: var(--background-image);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+}
+
+.decorated-zone {
+  position: relative;
 }
 
 .decorated-zone::after {
@@ -267,7 +274,7 @@
 }
 
 .footer {
-  position: relative;
+  /* position: relative; */
   min-block-size: max(100dvh, 668px);
   display: flex;
   justify-content: center;
