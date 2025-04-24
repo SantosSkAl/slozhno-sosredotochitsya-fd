@@ -17,6 +17,7 @@
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
   --lamp-display: block;
+  --button-text-color: var(--accent-color);
   --button-border-color: var(--accent-color);
   --button-hover-color: #FF007066;
   --decor-corner-color: var(--accent-color);
